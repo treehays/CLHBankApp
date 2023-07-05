@@ -12,6 +12,8 @@ namespace CLHBankApp.Repository.Interface
         void Delete(User user);
         void Update(User user);
         User GetUser(int id);
+        User GetUser(string email);
         User Add(User user);
+        User GetUserForLogIn( string password, string email);
     }
 }

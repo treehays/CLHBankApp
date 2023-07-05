@@ -13,5 +13,6 @@ namespace CLHBankApp.Models
         public Role Role  {get; set;}
         public Admin Admin {get; set;}
         public Customer Customer {get; set;}
+        public Address Address {get; set;}
     }
 }

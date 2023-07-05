@@ -8,6 +8,10 @@ namespace CLHBankApp.Service.Interface
 {
     public interface ICustomerService
     {
-        CustomerDTO Create (CreateCustomerRequestModel model);
+        BaseResponse Create(CreateCustomerRequestModel model);
+        BaseResponse DeleteCustomer(int id);
+        List<CustomerDTO> GetAll();
+        CustomerDTO GetCustomer(int id);
+        BaseResponse UpdateCustomer(int id, UpdateCustomerRequestModel model);
     }
 }

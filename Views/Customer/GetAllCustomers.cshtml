@@ -1,0 +1,27 @@
+﻿@model IEnumerable<CLHBankApp.Dto.CustomerDTO>;
+@{
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Update</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">1</th>
+                    <td>@item.FirstName</td>
+                    <td>@item.LastName</td>
+                    <td>@item.Email</td>
+                    <td><a asp-asp-controller="Customer" asp-action="CustomerUpdate" asp-route-id="@item.Id">Update</a></td>
+                </tr>
+            }  
+       
+        </tbody>
+    </table>
+}

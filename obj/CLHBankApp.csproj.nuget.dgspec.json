@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Abdul\\source\\repos\\testingnewout\\StudentApp\\CLHBankApp\\CLHBankApp.csproj": {}
+    "C:\\Users\\Abdul\\OneDrive\\Desktop\\CLHBankApp\\CLHBankApp\\CLHBankApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Abdul\\source\\repos\\testingnewout\\StudentApp\\CLHBankApp\\CLHBankApp.csproj": {
+    "C:\\Users\\Abdul\\OneDrive\\Desktop\\CLHBankApp\\CLHBankApp\\CLHBankApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Abdul\\source\\repos\\testingnewout\\StudentApp\\CLHBankApp\\CLHBankApp.csproj",
+        "projectUniqueName": "C:\\Users\\Abdul\\OneDrive\\Desktop\\CLHBankApp\\CLHBankApp\\CLHBankApp.csproj",
         "projectName": "CLHBankApp",
-        "projectPath": "C:\\Users\\Abdul\\source\\repos\\testingnewout\\StudentApp\\CLHBankApp\\CLHBankApp.csproj",
+        "projectPath": "C:\\Users\\Abdul\\OneDrive\\Desktop\\CLHBankApp\\CLHBankApp\\CLHBankApp.csproj",
         "packagesPath": "C:\\Users\\Abdul\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Abdul\\source\\repos\\testingnewout\\StudentApp\\CLHBankApp\\obj\\",
+        "outputPath": "C:\\Users\\Abdul\\OneDrive\\Desktop\\CLHBankApp\\CLHBankApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -27,6 +27,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.304\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
         }
       }
     }

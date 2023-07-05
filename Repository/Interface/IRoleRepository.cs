@@ -13,5 +13,6 @@ namespace CLHBankApp.Repository.Interface
         void Update(Role role);
         Role GetRole(int id);
         Role Add(Role role);
+        Role GetRole(string name);
     }
 }

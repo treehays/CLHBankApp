@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CLHBankApp.Models;
 using CLHBankApp.Models.CLHBankAppContext;
 using CLHBankApp.Repository.Interface;
+using Microsoft.EntityFrameworkCore;
 
 namespace CLHBankApp.Repository.Implementations
 {
@@ -32,11 +33,16 @@ namespace CLHBankApp.Repository.Implementations
 
         public List<Customer> GetAll()
         {
-            return _cLHBankAppContext.Customers.ToList();
+            return _cLHBankAppContext.Customers.
+            Include(x => x.User)
+            .ThenInclude(x => x.Address).ToList();
         }
         public Customer GetCustomer(int id)
         {
-            return _cLHBankAppContext.Customers.SingleOrDefault(x => x.Id == id);
+            return _cLHBankAppContext.Customers
+            .Include(x => x.User)   
+            .ThenInclude(x => x.Address)
+            .SingleOrDefault(x => x.Id == id);
         }
 
         public void Update(Customer customer)

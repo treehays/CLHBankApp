@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CLHBankApp.Models;
 using CLHBankApp.Models.CLHBankAppContext;
 using CLHBankApp.Repository.Interface;
+using Microsoft.EntityFrameworkCore;
 
 namespace CLHBankApp.Repository.Implementations
 {
@@ -37,6 +38,16 @@ namespace CLHBankApp.Repository.Implementations
         public User GetUser(int id)
         {
             return _cLHBankAppContext.Users.SingleOrDefault(x => x.Id == id);
+        }
+        public User GetUser(string email)
+        {
+            return _cLHBankAppContext.Users.SingleOrDefault(x => x.Email == email);
+        }
+        public User GetUserForLogIn( string email, string password)
+        {
+            return _cLHBankAppContext.Users
+            .Include(x => x.Role)
+            .SingleOrDefault( x=> x.Email == email && x.PassWord == password);
         }
 
         public void Update(User user)

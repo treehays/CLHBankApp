@@ -2,6 +2,7 @@ namespace CLHBankApp.Dto
 {
     public class CustomerDTO
     {
+        public int Id { get; set; }
         public string Email { get; set; }
         public string PassWord { get; set; }
         public string FirstName { get; set; }

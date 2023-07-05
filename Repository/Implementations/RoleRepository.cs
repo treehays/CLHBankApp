@@ -38,6 +38,10 @@ namespace CLHBankApp.Repository.Implementations
         {
             return _cLHBankAppContext.Roles.SingleOrDefault(x => x.Id == id);
         }
+        public Role GetRole(string name)
+        {
+            return _cLHBankAppContext.Roles.SingleOrDefault(x => x.RoleName == name);
+        }
 
         public void Update(Role role)
         {

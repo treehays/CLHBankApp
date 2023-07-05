@@ -49,6 +49,42 @@ namespace CLHBankApp.Migrations
                     b.ToTable("Accounts");
                 });
 
+            modelBuilder.Entity("CLHBankApp.Models.Address", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Street")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("Addresses");
+                });
+
             modelBuilder.Entity("CLHBankApp.Models.Admin", b =>
                 {
                     b.Property<int>("Id")
@@ -196,6 +232,17 @@ namespace CLHBankApp.Migrations
                     b.Navigation("Customer");
                 });
 
+            modelBuilder.Entity("CLHBankApp.Models.Address", b =>
+                {
+                    b.HasOne("CLHBankApp.Models.User", "User")
+                        .WithOne("Address")
+                        .HasForeignKey("CLHBankApp.Models.Address", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("CLHBankApp.Models.Admin", b =>
                 {
                     b.HasOne("CLHBankApp.Models.User", "User")
@@ -252,6 +299,9 @@ namespace CLHBankApp.Migrations
 
             modelBuilder.Entity("CLHBankApp.Models.User", b =>
                 {
+                    b.Navigation("Address")
+                        .IsRequired();
+
                     b.Navigation("Admin")
                         .IsRequired();
 
